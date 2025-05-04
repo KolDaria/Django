@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .sidebar {
+            background-color: #212529;
+            color: white;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar .position-sticky {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px 0;
+        }
+
+        .card-img-top {
+            background-color: #495057;
+            height: 200px; /* Adjust as needed */
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size:24px; /* Added font size for Thumbnail text*/
+        }
+
+        .sidebar a.active {
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 5px;
+        }
+
+        .custom-dropdown-menu {
+            background-color: transparent;
+            border: none;
+            padding: 0;
+        }
+
+        .custom-dropdown-toggle {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: none !important;
+            color: white !important;
+            padding: 10px 15px !important;
+            border-radius: 5px;
+            display: block;
+            text-align: left;
+
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .sidebar .dropup {
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Боковая панель -->
+            <nav class="col-md-3 col-lg-2 d-md-block sidebar">
+                <div class="position-sticky">
+                    <div class="d-flex align-items-center mb-4">
+                        <span class="fs-5 fw-bold">Меню</span>
+                    </div>
+
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                <i class="bi bi-house-door me-2"></i>
+                                Главная
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-list me-2"></i>
+                                Категории
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-card-list me-2"></i>
+                                Заказы
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-telephone me-2"></i>
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+
+                    <hr class="text-white-50">
+
+                    <!-- Выпадающее меню -->
+
+                    <div class="dropup">
+
+                        <button class="btn custom-dropdown-toggle dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            <i class="bi bi-person-circle me-2"></i> Пользователь
+                        </button>
+                        <ul class="dropdown-menu custom-dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Профиль</a></li>
+                            <li><a class="dropdown-item" href="#">Выход</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+          <!-- Основной контент -->
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2 text-center">Контакты</h1>
+                </div>
+              <div class="col-md-9 content d-flex justify-content-center">
+                <div class="content-wrapper">
+
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <form>
+                    <div class="form-group">
+                      <label for="name">Имя</label>
+                      <input type="text" class="form-control" id="name" placeholder="Введите имя">
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Почта</label>
+                      <input type="email" class="form-control" id="email" placeholder="Введите email">
+                    </div>
+                    <div class="form-group">
+                      <label for="message">Сообщение</label>
+                      <textarea class="form-control" id="message" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Отправить</button>
+                  </form>
+                </div>
+                <div class="col-md-6">
+                  <h2>Наши контакты</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p><small>While these feedback styles cannot be styled with CSS, you can still customize the feedback text through JavaScript.</small></p>
+                </div>
+              </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
